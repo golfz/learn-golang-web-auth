@@ -25,5 +25,13 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println(string(bs))
+	fmt.Println("struct to json:", string(bs))
+
+	xp2 := []Person{}
+	err = json.Unmarshal(bs, &xp2)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("json to struct:", xp2)
 }

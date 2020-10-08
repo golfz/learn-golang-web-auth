@@ -43,6 +43,8 @@ func main() {
 	http.HandleFunc("/encode", foo)
 	http.HandleFunc("/decode", bar)
 
+	log.Println("Running service on port 9090")
+
 	http.ListenAndServe(":9090", nil)
 }
 
